@@ -1,0 +1,18 @@
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Sport</th>
+			<th>City</th>
+			<th>Featured</th>
+		</tr>
+	</thead>
+	<tbody id="teamListTable">
+		<tr ng-repeat="team in teamsListCtrl.teamsList | filter:teamsListCtrl.listFilterService.activeFilters | filter:teamsListCtrl.listFilterService.searchText">
+			<td ng-bind="team.name"></td>
+			<td ng-bind="team.sport"></td>
+			<td ng-bind="team.city"></td>
+			<td ng-bind="team.featured"></td>
+		</tr>
+	</tbody>
+</table>
