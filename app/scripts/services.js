@@ -1,5 +1,5 @@
 angular.module('myApp.services', [])
-  .factory('listFilterService', listFilterService)
+  .service('listFilterService', listFilterService)
   .factory('teamsListFactory', teamsListFactory)
 ;
 

@@ -7,9 +7,11 @@ function listFilter() {
 	var directive = {
 		restrict: 'A',
 		scope: {},
+		templateUrl: 'views/list-filter.html',
 		controllerAs: 'listFilterCtrl',
-		controller: ListFilterCtrl,
-		templateUrl: 'views/list-filter.html'
+		controller: function (listFilterService) {
+			this.listFilterService = listFilterService;
+		}
 	};
 	return directive;
 }
@@ -18,9 +20,12 @@ function teamsList() {
 	var directive = {
 		restrict: 'A',
 		scope: {},
+		templateUrl: 'views/teams-list.html',
 		controllerAs: 'teamsListCtrl',
-		controller: TeamsListCtrl,
-		templateUrl: 'views/teams-list.html'
+		controller: function (teamsListFactory, listFilterService) {
+			this.teamsList = teamsList;
+			this.listFilterService = listFilterService;
+		}
 	};
 	return directive;
 }
