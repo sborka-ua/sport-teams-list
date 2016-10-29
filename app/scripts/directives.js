@@ -29,4 +29,3 @@ function teamsList() {
 	};
 	return directive;
 }
-

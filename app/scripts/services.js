@@ -6,7 +6,9 @@ angular.module('myApp.services', [])
 function listFilterService() {
 	return {
 		activeFilters: {},
-		searchText: ''
+		searchText: '',
+		sportTypes: ['', 'Basketball', 'Hockey', 'Football'],
+		cities: ['', 'Dallas', 'Los Angeles', 'Boston', 'New York']
 	};
 }
 

@@ -4,16 +4,18 @@
 	<meta charset="utf-8">
 	<title>Teams List App</title>
 	<link rel="stylesheet" href="styles/bootstrap.min.css">
-<!--
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.1/bootstrap.min.js">
-	</script>
--->
 </head>
 <body>
-	<div class="row-fluid">
-		<div list-filter class="span4"></div>
-		<div teams-list class="offset1 span8"></div>
+<div class="container">
+	<div class="row">
+		<header class="well well-sm col-xs-12 col-sm-10 col-sm-offset-1">
+			<h4 class="text-center text-primary">Teams List App</h4>
+		</header>
+
+		<section list-filter class="col-xs-12 col-sm-3 col-sm-offset-1"></section>
+		<section teams-list class="col-xs-12 col-sm-7"></section>
 	</div>
+</div>
 
 <script src="vendor/angular.min.js"></script>
 <script src="scripts/app.js"></script>
