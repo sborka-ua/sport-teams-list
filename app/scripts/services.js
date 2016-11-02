@@ -1,7 +1,32 @@
 angular.module('myApp.services', [])
+  .service('featuredClickService', featuredClickService)
   .service('listFilterService', listFilterService)
   .factory('teamsListFactory', teamsListFactory)
 ;
+
+/**
+ * featuredClickService расширяет зону клика по checkbox 'featured' до размеров родителя DIV
+ *
+ * listFilterService - получает значения фильтров,
+ * 	выбранных юзером в HTML-форме или набранный им текст в поле input
+ *
+ * teamsListFactory - предоставляет данные в объекте со списком спортивных команд
+ */
+
+function featuredClickService() {
+	return function(){
+		$('.featured-click').on('click', function (event) {
+			var target = event.target;
+
+			if ($('.featured-click').is(target)
+				|| $('.featured-click').children().not('input').is(target)
+			){
+				event.stopPropagation();
+				$('.featured-click input').click();
+			}
+		});
+	};
+}
 
 function listFilterService() {
 	return {
